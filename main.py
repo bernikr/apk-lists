@@ -1,10 +1,8 @@
-from datetime import datetime
-from importlib import reload
+import operator
 
 import requests
 from bs4 import BeautifulSoup, Tag
 from flask import Flask, render_template
-import operator
 
 app = Flask(__name__)
 
