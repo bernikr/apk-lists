@@ -1,0 +1,33 @@
+[project]
+name = "apk-lists"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "beautifulsoup4>=4.13.4",
+    "flask>=3.1.1",
+    "granian>=2.2.6",
+    "lxml>=5.4.0",
+    "requests>=2.32.3",
+]
+
+[tool.ruff]
+line-length = 120
+
+[tool.ruff.lint]
+preview = true
+select = ["ALL"]
+ignore = [
+    "E731",   # lambda assigning to a variable
+    "INP001", # Implicit namespace package
+    "D",      # pydocstyle
+    "CPY",    # flake8-copyright
+    "T20",    # flake8-print
+    "PGH003", # Use specific rule codes when using type ignore
+]
+
+[dependency-groups]
+dev = [
+    "ruff>=0.11.9",
+]
