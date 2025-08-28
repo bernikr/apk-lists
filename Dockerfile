@@ -26,5 +26,6 @@ SHELL ["sh", "-exc"]
 COPY --from=builder --chown=app:app /app /app
 ENV PATH="/app/.venv/bin:$PATH"
 
+WORKDIR /app
 EXPOSE 8080
 CMD ["granian", "--interface", "wsgi", "--host", "0.0.0.0", "--port", "8080", "main:app"]
